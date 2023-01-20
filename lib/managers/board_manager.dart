@@ -8,8 +8,8 @@ import 'package:uuid/uuid.dart';
 import '../model/tile.dart';
 import '../model/board.dart';
 
-import 'next_direction.dart';
-import 'round.dart';
+import 'next_direction_manager.dart';
+import 'round_manager.dart';
 
 class BoardManager extends StateNotifier<Board> {
   // We will use this list to retrieve the right index when user swipes up/down

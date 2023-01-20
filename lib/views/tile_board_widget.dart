@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../const/colors.dart';
-import '../managers/board.dart';
+import '../managers/board_manager.dart';
 
 import 'animated_tile.dart';
-import 'button.dart';
+import 'button_widget.dart';
 
 class TileBoardWidget extends ConsumerWidget {
   const TileBoardWidget({
