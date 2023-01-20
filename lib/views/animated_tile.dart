@@ -4,26 +4,30 @@ import '../models/tile.dart';
 
 class AnimatedTile extends AnimatedWidget {
   //We use Listenable.merge in order to update the animated widget when both of the controllers have change
-  AnimatedTile(
-      {super.key,
-      required this.moveAnimation,
-      required this.scaleAnimation,
-      required this.tile,
-      required this.child,
-      required this.size})
-      : super(listenable: Listenable.merge([moveAnimation, scaleAnimation]));
+  AnimatedTile({
+    super.key,
+    required this.moveAnimation,
+    required this.scaleAnimation,
+    required this.tile,
+    required this.child,
+    required this.size,
+  }) : super(listenable: Listenable.merge([moveAnimation, scaleAnimation]));
 
   final Tile tile;
   final Widget child;
   final CurvedAnimation moveAnimation;
   final CurvedAnimation scaleAnimation;
   final double size;
+
   //Get the current top position based on current index of the tile
   late final double _top = tile.getTop(size);
+
   //Get the current left position based on current index of the tile
   late final double _left = tile.getLeft(size);
+
   //Get the next top position based on current next index of the tile
   late final double _nextTop = tile.getNextTop(size) ?? _top;
+
   //Get the next top position based on next index of the tile
   late final double _nextLeft = tile.getNextLeft(size) ?? _left;
 

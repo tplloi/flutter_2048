@@ -9,14 +9,20 @@ import 'animated_tile.dart';
 import 'button.dart';
 
 class TileBoardWidget extends ConsumerWidget {
-  const TileBoardWidget(
-      {super.key, required this.moveAnimation, required this.scaleAnimation});
+  const TileBoardWidget({
+    super.key,
+    required this.moveAnimation,
+    required this.scaleAnimation,
+  });
 
   final CurvedAnimation moveAnimation;
   final CurvedAnimation scaleAnimation;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(
+    BuildContext context,
+    WidgetRef ref,
+  ) {
     final board = ref.watch(boardManager);
 
     //Decides the maximum size the Board can be based on the shortest size of the screen.

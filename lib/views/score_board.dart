@@ -30,9 +30,12 @@ class ScoreBoard extends ConsumerWidget {
 }
 
 class Score extends StatelessWidget {
-  const Score(
-      {Key? key, required this.label, required this.score, this.padding})
-      : super(key: key);
+  const Score({
+    Key? key,
+    required this.label,
+    required this.score,
+    this.padding,
+  }) : super(key: key);
 
   final String label;
   final String score;

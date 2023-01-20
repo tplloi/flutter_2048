@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_swipe_detector/flutter_swipe_detector.dart';
 
-import 'components/button.dart';
-import 'components/empy_board.dart';
-import 'components/score_board.dart';
-import 'components/tile_board.dart';
+import 'views/button.dart';
+import 'views/empy_board.dart';
+import 'views/score_board.dart';
+import 'views/tile_board.dart';
 import 'const/colors.dart';
 import 'managers/board.dart';
 
