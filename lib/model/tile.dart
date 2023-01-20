@@ -6,12 +6,16 @@ part 'tile.g.dart';
 class Tile {
   //Unique id used as ValueKey for the TileWidget
   final String id;
+
   //The number on the tile
   final int value;
+
   //The index of the tile on the board from which the position of the tile will be calculated
   final int index;
+
   //The next index of the tile on the board
   final int? nextIndex;
+
   //Whether the tile was merged with another tile
   final bool merged;
 

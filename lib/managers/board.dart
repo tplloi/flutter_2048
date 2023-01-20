@@ -5,8 +5,8 @@ import 'package:flutter_swipe_detector/flutter_swipe_detector.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:uuid/uuid.dart';
 
-import '../models/tile.dart';
-import '../models/board.dart';
+import '../model/tile.dart';
+import '../model/board.dart';
 
 import 'next_direction.dart';
 import 'round.dart';
@@ -17,6 +17,7 @@ class BoardManager extends StateNotifier<Board> {
   final verticalOrder = [12, 8, 4, 0, 13, 9, 5, 1, 14, 10, 6, 2, 15, 11, 7, 3];
 
   final StateNotifierProviderRef ref;
+
   BoardManager(this.ref) : super(Board.newGame(0, [])) {
     //Load the last saved state or start a new game.
     load();

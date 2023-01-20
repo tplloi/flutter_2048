@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../models/tile.dart';
+import '../model/tile.dart';
 
 part 'board.g.dart';
 
@@ -8,14 +8,19 @@ part 'board.g.dart';
 class Board {
   //Current score on the board
   final int score;
+
   //Best score so far
   final int best;
+
   //Current list of tiles shown on the board
   final List<Tile> tiles;
+
   //Whether the game is over or not
   final bool over;
+
   //Whether the game is won or not
   final bool won;
+
   //Keeps the previous round board state used for the undo functionality
   final Board? undo;
 

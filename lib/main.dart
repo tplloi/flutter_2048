@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-import 'models/board_adapter.dart';
+import 'model/board_adapter.dart';
 
 import 'game_view.dart';
 
