@@ -5,7 +5,11 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 import 'models/board_adapter.dart';
 
-import 'game.dart';
+import 'game_view.dart';
+
+//TODO icon launcher
+//TODO package name
+//TODO rate, more app
 
 void main() async {
   //Allow only portrait mode on Android & iOS
@@ -13,13 +17,15 @@ void main() async {
   await SystemChrome.setPreferredOrientations(
     [DeviceOrientation.portraitUp],
   );
+
   //Make sure Hive is initialized first and only after register the adapter.
   await Hive.initFlutter();
   Hive.registerAdapter(BoardAdapter());
+
   runApp(const ProviderScope(
     child: MaterialApp(
       title: '2048',
-      home: Game(),
+      home: GameView(),
     ),
   ));
 }

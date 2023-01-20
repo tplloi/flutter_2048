@@ -9,14 +9,14 @@ import 'components/tile_board.dart';
 import 'const/colors.dart';
 import 'managers/board.dart';
 
-class Game extends ConsumerStatefulWidget {
-  const Game({super.key});
+class GameView extends ConsumerStatefulWidget {
+  const GameView({super.key});
 
   @override
   ConsumerState<ConsumerStatefulWidget> createState() => _GameState();
 }
 
-class _GameState extends ConsumerState<Game>
+class _GameState extends ConsumerState<GameView>
     with TickerProviderStateMixin, WidgetsBindingObserver {
   //The contoller used to move the the tiles
   late final AnimationController _moveController = AnimationController(
