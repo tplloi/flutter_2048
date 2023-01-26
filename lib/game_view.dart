@@ -136,7 +136,7 @@ class _GameState extends ConsumerState<GameView>
                               },
                               panaraDialogType: PanaraDialogType.custom,
                               barrierDismissible: true,
-                              imagePath: "assets/images/request.png",
+                              imagePath: "assets/images/q.png",
                               color: textColor,
                               textColor: buttonColor,
                               buttonTextColor: textColorWhite,
