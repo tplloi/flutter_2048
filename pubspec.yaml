@@ -23,5 +23,13 @@ dev_dependencies:
   flutter_lints: ^2.0.1
   build_runner: ^2.3.3
   json_serializable: ^6.6.0
+  flutter_launcher_icons: ^0.11.0
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/rubik.png"
+#  flutter pub run flutter_launcher_icons:main
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/

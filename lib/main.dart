@@ -7,11 +7,11 @@ import 'model/board_adapter.dart';
 
 import 'game_view.dart';
 
-//TODO icon launcher
 //TODO rate, more app
 
 //done
 //package name
+//icon launcher
 
 void main() async {
   //Allow only portrait mode on Android & iOS
