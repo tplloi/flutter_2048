@@ -44,8 +44,8 @@ android {
 
     defaultConfig {
         applicationId "com.roy93group.game2048"
-        minSdkVersion flutter.minSdkVersion
-        targetSdkVersion flutter.targetSdkVersion
+        minSdkVersion 21
+        targetSdkVersion 33
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
