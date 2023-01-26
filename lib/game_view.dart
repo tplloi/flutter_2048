@@ -129,7 +129,7 @@ class _GameState extends ConsumerState<GameView>
                         ButtonWidget(
                           icon: Icons.star,
                           onPressed: () {
-                            //TODO
+                            UrlLauncherUtils.rateApp(null, null);
                           },
                         ),
                         const SizedBox(
@@ -138,7 +138,7 @@ class _GameState extends ConsumerState<GameView>
                         ButtonWidget(
                           icon: Icons.favorite,
                           onPressed: () {
-                            //TODO
+                            UrlLauncherUtils.moreApp();
                           },
                         ),
                         const SizedBox(

@@ -7,12 +7,11 @@ import 'model/board_adapter.dart';
 
 import 'game_view.dart';
 
-//TODO rate, more app
-
 //done
 //package name
 //icon launcher
 //policy
+//rate, more app
 
 void main() async {
   //Allow only portrait mode on Android & iOS
