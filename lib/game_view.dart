@@ -85,49 +85,61 @@ class _GameState extends ConsumerState<GameView>
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const Text(
+                '2048',
+                style: TextStyle(
+                  color: textColor,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 52.0,
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                child: Row(
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    const Text(
-                      '2048',
-                      style: TextStyle(
-                        color: textColor,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 52.0,
-                      ),
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.end,
+                    const ScoreBoard(),
+                    const SizedBox(height: 32.0),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const ScoreBoard(),
-                        const SizedBox(
-                          height: 32.0,
+                        ButtonWidget(
+                          icon: Icons.undo,
+                          onPressed: () {
+                            //Undo the round.
+                            ref.read(boardManager.notifier).undo();
+                          },
                         ),
-                        Row(
-                          children: [
-                            ButtonWidget(
-                              icon: Icons.undo,
-                              onPressed: () {
-                                //Undo the round.
-                                ref.read(boardManager.notifier).undo();
-                              },
-                            ),
-                            const SizedBox(
-                              width: 16.0,
-                            ),
-                            //TODO show popup confirm
-                            ButtonWidget(
-                              icon: Icons.refresh,
-                              onPressed: () {
-                                //Restart the game
-                                ref.read(boardManager.notifier).newGame();
-                              },
-                            )
-                          ],
-                        )
+                        const SizedBox(
+                          width: 16.0,
+                        ),
+                        //TODO show popup confirm
+                        ButtonWidget(
+                          icon: Icons.refresh,
+                          onPressed: () {
+                            //Restart the game
+                            ref.read(boardManager.notifier).newGame();
+                          },
+                        ),
+                        const SizedBox(
+                          width: 16.0,
+                        ),
+                        ButtonWidget(
+                          icon: Icons.star,
+                          onPressed: () {
+                            //TODO
+                          },
+                        ),
+                        const SizedBox(
+                          width: 16.0,
+                        ),
+                        ButtonWidget(
+                          icon: Icons.favorite,
+                          onPressed: () {
+                            //TODO
+                          },
+                        ),
                       ],
                     )
                   ],
