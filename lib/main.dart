@@ -7,6 +7,8 @@ import 'model/board_adapter.dart';
 
 import 'game_view.dart';
 
+//TODO splash screen
+
 //done
 //package name
 //icon launcher
