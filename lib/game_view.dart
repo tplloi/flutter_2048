@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_swipe_detector/flutter_swipe_detector.dart';
+import 'package:game_2048/utils/url_launcher_utils.dart';
 
 import 'views/button_widget.dart';
 import 'views/empy_board_widget.dart';
@@ -138,6 +139,15 @@ class _GameState extends ConsumerState<GameView>
                           icon: Icons.favorite,
                           onPressed: () {
                             //TODO
+                          },
+                        ),
+                        const SizedBox(
+                          width: 16.0,
+                        ),
+                        ButtonWidget(
+                          icon: Icons.policy,
+                          onPressed: () {
+                            UrlLauncherUtils.launchPolicy();
                           },
                         ),
                       ],

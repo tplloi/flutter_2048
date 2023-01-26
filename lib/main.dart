@@ -12,6 +12,7 @@ import 'game_view.dart';
 //done
 //package name
 //icon launcher
+//policy
 
 void main() async {
   //Allow only portrait mode on Android & iOS
