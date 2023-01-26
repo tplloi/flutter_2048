@@ -120,7 +120,7 @@ class _GameState extends ConsumerState<GameView>
                           icon: Icons.refresh,
                           onPressed: () {
                             //Restart the game
-                            PanaraConfirmDialog.show(
+                            PanaraConfirmDialog.showAnimatedGrow(
                               context,
                               title: "2048",
                               message:
@@ -134,8 +134,12 @@ class _GameState extends ConsumerState<GameView>
                                 Navigator.pop(context);
                                 ref.read(boardManager.notifier).newGame();
                               },
-                              panaraDialogType: PanaraDialogType.normal,
+                              panaraDialogType: PanaraDialogType.custom,
                               barrierDismissible: true,
+                              imagePath: "assets/images/request.png",
+                              color: textColor,
+                              textColor: buttonColor,
+                              buttonTextColor: textColorWhite,
                             );
                           },
                         ),
