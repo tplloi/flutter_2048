@@ -9,6 +9,7 @@ import 'views/score_board.dart';
 import 'views/tile_board_widget.dart';
 import 'const/colors.dart';
 import 'managers/board_manager.dart';
+import 'package:panara_dialogs/panara_dialogs.dart';
 
 class GameView extends ConsumerStatefulWidget {
   const GameView({super.key});
@@ -115,12 +116,27 @@ class _GameState extends ConsumerState<GameView>
                         const SizedBox(
                           width: 16.0,
                         ),
-                        //TODO show popup confirm
                         ButtonWidget(
                           icon: Icons.refresh,
                           onPressed: () {
                             //Restart the game
-                            ref.read(boardManager.notifier).newGame();
+                            PanaraConfirmDialog.show(
+                              context,
+                              title: "2048",
+                              message:
+                                  "Are you sure you want to start a new game?",
+                              confirmButtonText: "Yes",
+                              cancelButtonText: "No",
+                              onTapCancel: () {
+                                Navigator.pop(context);
+                              },
+                              onTapConfirm: () {
+                                Navigator.pop(context);
+                                ref.read(boardManager.notifier).newGame();
+                              },
+                              panaraDialogType: PanaraDialogType.normal,
+                              barrierDismissible: true,
+                            );
                           },
                         ),
                         const SizedBox(
