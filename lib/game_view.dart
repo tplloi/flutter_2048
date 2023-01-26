@@ -93,9 +93,10 @@ class _GameState extends ConsumerState<GameView>
                     const Text(
                       '2048',
                       style: TextStyle(
-                          color: textColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 52.0),
+                        color: textColor,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 52.0,
+                      ),
                     ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -117,6 +118,7 @@ class _GameState extends ConsumerState<GameView>
                             const SizedBox(
                               width: 16.0,
                             ),
+                            //TODO show popup confirm
                             ButtonWidget(
                               icon: Icons.refresh,
                               onPressed: () {
@@ -131,15 +133,14 @@ class _GameState extends ConsumerState<GameView>
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 32.0,
-              ),
+              const SizedBox(height: 32.0),
               Stack(
                 children: [
                   const EmptyBoardWidget(),
                   TileBoardWidget(
-                      moveAnimation: _moveAnimation,
-                      scaleAnimation: _scaleAnimation)
+                    moveAnimation: _moveAnimation,
+                    scaleAnimation: _scaleAnimation,
+                  )
                 ],
               )
             ],
