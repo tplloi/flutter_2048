@@ -28,7 +28,7 @@ void main() async {
   runApp(const ProviderScope(
     child: MaterialApp(
       debugShowCheckedModeBanner: true,
-      debugShowMaterialGrid: true,
+      debugShowMaterialGrid: false,
       title: '2048',
       home: GameView(),
     ),
