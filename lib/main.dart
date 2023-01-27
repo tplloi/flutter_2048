@@ -7,13 +7,12 @@ import 'model/board_adapter.dart';
 
 import 'game_view.dart';
 
-//TODO splash screen
-
 //done
 //package name
 //icon launcher
 //policy
 //rate, more app
+//splash screen
 
 void main() async {
   //Allow only portrait mode on Android & iOS
