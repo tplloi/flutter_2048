@@ -87,7 +87,7 @@ class TileBoardWidget extends ConsumerWidget {
                     onPressed: () {
                       ref.read(boardManager.notifier).newGame();
                     },
-                  )
+                  ),
                 ],
               ),
             ))

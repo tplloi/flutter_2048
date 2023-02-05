@@ -22,17 +22,33 @@ class ButtonWidget extends ConsumerWidget {
   ) {
     if (icon != null) {
       //Button Widget with icon for Undo and Restart Game button.
-      return Container(
-        decoration: BoxDecoration(
-            color: scoreColor, borderRadius: BorderRadius.circular(8.0)),
-        child: IconButton(
-          color: textColorWhite,
-          onPressed: onPressed,
-          icon: Icon(
-            icon,
-            size: 24.0,
+      return Column(
+        // mainAxisAlignment: MainAxisAlignment.center,
+        // crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            decoration: BoxDecoration(
+                color: scoreColor, borderRadius: BorderRadius.circular(8.0)),
+            child: IconButton(
+              color: textColorWhite,
+              onPressed: onPressed,
+              icon: Icon(
+                icon,
+                size: 24.0,
+              ),
+            ),
           ),
-        ),
+          if (text != null && text?.isNotEmpty == true)
+            Text(
+              text!,
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 14.0,
+                color: scoreColor,
+              ),
+              textAlign: TextAlign.center,
+            ),
+        ],
       );
     }
     //Button Widget with text for New Game and Try Again button.

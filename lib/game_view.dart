@@ -98,7 +98,7 @@ class _GameState extends ConsumerState<GameView>
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     const ScoreBoard(),
@@ -108,16 +108,16 @@ class _GameState extends ConsumerState<GameView>
                       children: [
                         ButtonWidget(
                           icon: Icons.undo,
+                          text: "Undo\n",
                           onPressed: () {
                             //Undo the round.
                             ref.read(boardManager.notifier).undo();
                           },
                         ),
-                        const SizedBox(
-                          width: 16.0,
-                        ),
+                        const SizedBox(width: 16.0),
                         ButtonWidget(
                           icon: Icons.refresh,
+                          text: "New\ngame",
                           onPressed: () {
                             //Restart the game
                             PanaraConfirmDialog.showAnimatedGrow(
@@ -143,29 +143,26 @@ class _GameState extends ConsumerState<GameView>
                             );
                           },
                         ),
-                        const SizedBox(
-                          width: 16.0,
-                        ),
+                        const SizedBox(width: 16.0),
                         ButtonWidget(
                           icon: Icons.star,
+                          text: "Rate\napp",
                           onPressed: () {
                             UrlLauncherUtils.rateApp(null, null);
                           },
                         ),
-                        const SizedBox(
-                          width: 16.0,
-                        ),
+                        const SizedBox(width: 16.0),
                         ButtonWidget(
                           icon: Icons.favorite,
+                          text: "More\napp",
                           onPressed: () {
                             UrlLauncherUtils.moreApp();
                           },
                         ),
-                        const SizedBox(
-                          width: 16.0,
-                        ),
+                        const SizedBox(width: 16.0),
                         ButtonWidget(
                           icon: Icons.policy,
+                          text: "Privacy\npolicy",
                           onPressed: () {
                             UrlLauncherUtils.launchPolicy();
                           },
